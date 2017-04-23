@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Models
 {
-    public class Patient
+    public class Patients
     {
         public string Name { get; set; }
         public Address Address { get; set; }
@@ -13,5 +13,6 @@ namespace WebApplication1.Models
         public string Email { get; set; }
         public DateTime Birthdate { get; set; }
         public string SSN { get; set; }
+        public int ID { get; set; }
     }
 }

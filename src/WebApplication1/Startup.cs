@@ -13,6 +13,7 @@ using WebApplication1.Data;
 using WebApplication1.Models;
 using WebApplication1.Services;
 
+
 namespace WebApplication1
 {
     public class Startup
@@ -47,6 +48,8 @@ namespace WebApplication1
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<PatientDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
